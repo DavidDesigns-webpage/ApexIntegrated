@@ -5,7 +5,7 @@ body{
     background-size: cover;
     margin: 0;
     padding: 0;
-    height: 2000px;
+    height: auto;
 }
 header{
     position: fixed;
@@ -152,7 +152,7 @@ a{
 .bump{
     height: 80px;
 }
-.containerOne{
+.containerOne,.containerTwo{
     display: flex;
     width: 100%;
     padding-top: 50px;
@@ -173,9 +173,11 @@ a{
     height: 30px;
     background-color: #409afb24;
     font-size: 15px;
+    margin-bottom: 20px;
 }
 .infoTab{
     color: gray;
+    font-family: "Inter",sans-serif;
 }
 .infoTab p {
     padding: 0 20px 0 20px;
@@ -192,5 +194,59 @@ a{
     box-shadow: 0 0 8px rgba(70,159,255,0.6);
     transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
+.infoTab.One h1{
+    margin: 5px;
+}
+.infoTab.Two{
+    width: 100%;
+    margin: 60px 0 60px 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+}
+.item{
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+.item p{
+    margin: 0;
+}
+.offset{
+    margin: 20px;
+}
+.serviceLabel{
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid 1px #409afb22;
+    background-color:#111522;
+    border-radius: 20px;
+    text-align: left;
+    padding: 20px;
+    color: gray;
+    max-width: 400px;
+}
+.serviceLabel img {
+    border: #409afb67 solid 1px;
+    background-color: #112038;
+    border-radius: 20px;
+    width: 50px;
+    padding: 10px;
+    transition: 0.3s;
+}
+#serviceBttn:hover{
 
+    .serviceLabel{
+        box-shadow: 4px 4px 10px rgb(70,159,255);
+    }
+    .serviceLabel img{
+        background-color: #577ea88d;
+}
+}
 

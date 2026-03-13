@@ -13,3 +13,12 @@ menuBtn.addEventListener("click", () => {
         menuIcon.src = "image/apexBars.svg"; // burger icon
     }
 });
+const navLinks = document.querySelectorAll("#header a");
+
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        header.classList.remove("open");
+        menuIcon.src = "image/apexBars.svg"; // reset to burger icon
+    });
+});
+
