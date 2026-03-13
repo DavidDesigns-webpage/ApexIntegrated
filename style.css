@@ -1,8 +1,11 @@
 body{
-    background-color: rgba(9, 12, 21);
+    background-image: url(image/gradientBG.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 0;
     padding: 0;
-    height: 20000px;
+    height: 2000px;
 }
 header{
     position: fixed;
@@ -74,7 +77,7 @@ header .logo{
     height: 30px;
 }
 .blue{
-    color: rgba(17, 135, 250);
+    color:#409bfb;
 }
 .white{
     color: rgba(228, 233, 240);
@@ -103,7 +106,7 @@ button{
     transform: translateY(0px);
 }
 .navLinks{
-    font-family: "Montserrat",sans-serif;
+    font-family: "Inter",sans-serif;
     height: 300px;
     display: flex;
     flex-direction: column;
@@ -115,7 +118,12 @@ button{
     width:100%;
     margin-top:20px;
 }
-
+a{
+     outline: none;
+    -webkit-tap-highlight-color: transparent; 
+    font-family: "Montserrat",sans-serif;
+    text-decoration: none;
+}
 .getQuote {
     padding: 12px 25px;
     background-color: rgb(70,159,255);
@@ -127,7 +135,7 @@ button{
     box-shadow: 0 0 8px rgba(70,159,255,0.6);
     transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
-.getQuote:hover {
+.getQuote:hover,.whatsappBttn:hover {
     box-shadow: 0 0 20px rgba(70,159,255,0.8), 0 0 40px rgba(70,159,255,0.5);
     transform: scale(1.05);
     cursor: pointer;
@@ -140,6 +148,49 @@ button{
 
 .getQuote {
     animation: glowPulse 2s infinite ease-in-out;
+}
+.bump{
+    height: 80px;
+}
+.containerOne{
+    display: flex;
+    width: 100%;
+    padding-top: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+}
+.slogan{
+    padding: 0 6px 0 6px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: #409afb9a solid 0.1px;
+    border-radius: 50px;
+    height: 30px;
+    background-color: #409afb24;
+    font-size: 15px;
+}
+.infoTab{
+    color: gray;
+}
+.infoTab p {
+    padding: 0 20px 0 20px;
+}
+.whatsappBttn{
+    padding: 12px 25px;
+    background-color: rgba(70, 159, 255, 0);
+    border-radius: 14px;
+    width: 200px;
+    text-align: center;
+    color: #409bfb;
+
+    /* Glow */
+    box-shadow: 0 0 8px rgba(70,159,255,0.6);
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 
