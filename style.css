@@ -79,7 +79,7 @@ header .logo{
 .blue{
     color:#409bfb;
 }
-.white{
+.white, .smallGrid p{
     color: rgba(228, 233, 240);
 }
 .iconBackDrop{
@@ -161,6 +161,20 @@ a{
     align-items: center;
     font-family: "Inter", sans-serif;
     text-align: center;
+}
+.containerThree{
+    display: block;
+    max-width: 100%;
+    padding-top: 50px;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items: flex-start;
+    font-family: "Inter", sans-serif;
+    padding: 10px;
+    text-align: left;
+}
+p{
+    color: gray;
 }
 .slogan{
     padding: 0 6px 0 6px ;
@@ -248,5 +262,10 @@ a{
     .serviceLabel img{
         background-color: #577ea88d;
 }
+}
+.smallGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
 }
 
