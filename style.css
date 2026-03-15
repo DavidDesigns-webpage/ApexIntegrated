@@ -85,6 +85,9 @@ header .logo{
 .white, .smallGrid p{
     color: rgba(228, 233, 240);
 }
+.gray{
+    color: gray;
+}
 .iconBackDrop{
     width: 50px;
     height: 50px;
@@ -155,7 +158,7 @@ a{
 .bump{
     height: 80px;
 }
-.containerOne,.containerTwo{
+.containerOne,.containerTwo,.containerFour{
     display: flex;
     width: 100%;
     padding-top: 50px;
@@ -285,4 +288,21 @@ p{
     padding: 10px 0 0 0;
     margin: 0;
 }
-
+.whyInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 10px 20px 10px;
+}
+.whyInfo img{
+    border: #409afb67 solid 1px;
+    background-color: #112038;
+    border-radius: 50%;
+    width: 50px;
+    padding: 5px;
+}
+.whyInfo .gray{
+    font-size: small;
+    padding: 0 20px 0 20px;
+}
