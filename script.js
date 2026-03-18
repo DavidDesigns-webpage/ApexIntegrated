@@ -22,3 +22,17 @@ navLinks.forEach(link => {
     });
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  const button = document.querySelector(".getQuoteO");
+  const select = document.getElementById("serviceS");
+
+  button.addEventListener("click", () => {
+      const service = select.value;
+      const subject = encodeURIComponent(`Quote Request: ${service}`);
+      const body = encodeURIComponent(
+        `Hi,\n\nI would like a quote for: ${service}\n\nName:\nContact:\n`
+      );
+
+      window.location.href = `mailto:info@apexintegrated.co.za?subject=${subject}&body=${body}`;
+  });
+});
