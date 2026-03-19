@@ -32,6 +32,9 @@
 body.loading{
     overflow: hidden;
 }
+html{
+    color-scheme: dark;
+}
 html, body {
     overflow-x: hidden;
 }
@@ -449,8 +452,13 @@ img, svg {
   height: auto;
   filter: none !important;
   mix-blend-mode: normal !important;
+  -webkit-filter: none !important;
 }
-
+@media (prefers-color-scheme: dark) {
+    img {
+        filter: none !important;
+    }
+}
 svg {
   fill: #C0C0C0; /* or your exact brand color */
 }
