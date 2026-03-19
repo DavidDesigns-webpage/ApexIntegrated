@@ -1,3 +1,9 @@
+document.body.classList.add('loading');
+window.addEventListener('load', () => {
+    const loader = document.getElementById('loader');
+    loader.classList.add('hide');
+    document.body.classList.remove('loading');
+});
 const menuBtn = document.getElementById("menuBtn");
 const header = document.getElementById("header");
 const menuIcon = document.getElementById("menuIcon");
