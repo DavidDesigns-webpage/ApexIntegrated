@@ -36,3 +36,20 @@ document.addEventListener("DOMContentLoaded", () => {
       window.location.href = `mailto:info@apexintegrated.co.za?subject=${subject}&body=${body}`;
   });
 });
+const year = document.getElementById("year");
+    if (year){
+        year.textContent = new Date().getFullYear();
+    };
+const reveals = document.querySelectorAll(".reveal");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+        }
+    });
+}, {
+    threshold: 0.15
+});
+
+reveals.forEach(el => observer.observe(el));

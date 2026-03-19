@@ -1,3 +1,6 @@
+html, body {
+    overflow-x: hidden;
+}
 body{
     background-image: url(image/gradientBG.png);
     background-position: center;
@@ -11,15 +14,18 @@ body{
     border-radius: 50%;
 }
 header{
+    z-index: 20;
     position: fixed;
     width: 100%;
     background: rgba(9,12,21,0.9);
     border-bottom: 1px solid rgba(109,109,109,0.2);
+    overflow-x: hidden;
+    padding-top: 5px;
 }
 
 /* TOP BAR */
 
-.first{
+.first, .last{
     display:flex;
     align-items:center;
     padding:10px;
@@ -62,12 +68,12 @@ nav a{
 
 }
 
-header h1{
+header h1,.last h1{
     font-family: "Orbitron",sans-serif;
     font-size: large;
     padding: 5px;
 }
-header .logo{
+header .logo, .last .logo{
     box-shadow: 0px 4px 10px rgba(101, 173, 251, 0.556);
 }
 .mobileNavBars{
@@ -157,7 +163,7 @@ a{
     animation: glowPulse 2s infinite ease-in-out;
 }
 .bump{
-    height: 80px;
+    height: 30px;
 }
 .containerOne,.containerTwo,.containerFour,.containerFive{
     display: flex;
@@ -168,8 +174,9 @@ a{
     align-items: center;
     font-family: "Inter", sans-serif;
     text-align: center;
+    overflow-x: hidden;
 }
-.containerThree,.containerSix{
+.containerThree,.containerSix, footer{
     display: block;
     max-width: 100%;
     padding-top: 50px;
@@ -179,6 +186,7 @@ a{
     font-family: "Inter", sans-serif;
     padding: 10px;
     text-align: left;
+    overflow-x: hidden;
 }
 p{
     color: gray;
@@ -195,6 +203,18 @@ p{
     background-color: #409afb24;
     font-size: 15px;
     margin-bottom: 20px;
+    font-size: small;
+}
+.hero{
+    padding: 20px;
+ background:
+        linear-gradient(rgba(0, 0, 0, 0.722), rgba(0, 0, 0, 0.716)),
+        url(image/backone.webp) center/cover no-repeat;
+    max-width: 100%;
+}
+.smallback{
+    background-color: #0c152375;
+    border-radius: 20px;
 }
 .infoTab{
     color: gray;
@@ -395,3 +415,56 @@ svg {
 .logo {
   transform: translateZ(0);
 }
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #112038;
+    font-family: "Inter",sans-serif;
+}
+footer p {
+    padding: 10px;
+}
+.last h1{
+    font-size: small;
+}
+.last .logo{
+    width: 30px;
+}
+.end .gray{
+    padding: 0 0 0 10px;
+}
+.end .white{
+    font-size: large;
+}
+.end p img{
+    display: inline;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    border-top: #375079 solid 2px;
+    margin-top: 40px;
+    font-size: x-small;
+}
+/* Base hidden state */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px); /* default slide up */
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Slide directions */
+.reveal-left { transform: translateX(-20px); }
+.reveal-right { transform: translateX(20px); }
+.reveal-up { transform: translateY(40px); }
+
+/* Active state */
+.reveal.active {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* Optional: smooth multiple reveals */
+.reveal:nth-child(1) { transition-delay: 0.1s; }
+.reveal:nth-child(2) { transition-delay: 0.2s; }
+.reveal:nth-child(3) { transition-delay: 0.3s; }
