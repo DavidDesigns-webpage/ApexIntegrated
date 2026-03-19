@@ -285,8 +285,8 @@ p{
     border: #409afb67 solid 1px;
     background-color: #112038;
     border-radius: 20px;
-    width: 50px;
-    padding: 10px;
+    width: 60px;
+    padding: 5px;
     transition: 0.3s;
 }
 #serviceBttn:hover{
@@ -302,12 +302,13 @@ p{
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-items: center;
+    align-items: center;
 }
 .panels p {
     color: gray;
     font-size: small;
 }
-.smallGrid a .serviceLabel{
+.smallGrid .serviceLabel{
     justify-items: center;
     align-items: center;
     padding: 0 20px 0 20px;
@@ -378,6 +379,11 @@ p{
     padding: 5px;
     transition: 0.3s;
     margin-right: 10px;
+}
+.contactTab:hover{
+    .contactImg{
+        background-color: #577ea88d;
+    }
 }
 .serviceSlct{
     display: flex;
