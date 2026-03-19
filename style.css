@@ -240,6 +240,14 @@ p{
 .offset{
     margin: 20px;
 }
+.namebox{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+.namebox h1{
+    margin: 0;
+}
 .serviceLabel{
     display: flex;
     margin: 10px;
@@ -374,5 +382,16 @@ p{
     font-family: "Inter",sans-serif;
 }
 img, svg {
+  max-width: 100%;
+  height: auto;
   filter: none !important;
+  mix-blend-mode: normal !important;
+}
+
+svg {
+  fill: #C0C0C0; /* or your exact brand color */
+}
+
+.logo {
+  transform: translateZ(0);
 }
