@@ -36,10 +36,10 @@ html, body {
     overflow-x: hidden;
 }
 body{
-    background-image: url(image/gradientBG.png);
+    background-image: url(image/bgApexDark.webp);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: auto;
     margin: 0;
     padding: 0;
     height: auto;
