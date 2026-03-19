@@ -21,6 +21,7 @@ header{
     border-bottom: 1px solid rgba(109,109,109,0.2);
     overflow-x: hidden;
     padding-top: 5px;
+    max-height: 80px;
 }
 
 /* TOP BAR */
@@ -52,7 +53,9 @@ header{
 header.open .navMenu{
     max-height:400px;
 }
-
+header.open{
+    max-height: none;
+}
 /* NAV LINKS */
 
 .navLinks nav{
