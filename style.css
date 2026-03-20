@@ -705,3 +705,8 @@ footer p{
     height: 80px;
 }
 }
+@media (max-width: 1024px) {
+    .qLinks{
+        display: none;
+    }
+}
