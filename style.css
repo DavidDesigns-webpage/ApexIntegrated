@@ -636,11 +636,18 @@ footer p {
     gap: 10px;
 }
 .footerGrid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    flex-direction: row;
+}
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 footer p{
     width: 300px;
+    text-align: center;
 }
 .copyright{
     display: flex;
