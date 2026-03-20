@@ -42,7 +42,7 @@ body{
     background-image: url(image/bgApexDark.webp);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     margin: 0;
     padding: 0;
     height: auto;
@@ -58,7 +58,6 @@ header{
     border-bottom: 1px solid rgba(109,109,109,0.2);
     overflow-x: hidden;
     padding-top: 5px;
-    max-height: 80px;
 }
 
 /* TOP BAR */
@@ -329,14 +328,11 @@ p{
     padding: 5px;
     transition: 0.3s;
 }
-#serviceBttn:hover{
-
-    .serviceLabel{
+.serviceBttn:hover .serviceLabel{
         box-shadow: 4px 4px 10px rgb(70,159,255);
     }
-    .serviceLabel img{
+.serviceBttn:hover .serviceLabel img{
         background-color: #577ea88d;
-}
 }
 .smallGrid{
     display: grid;
@@ -420,10 +416,9 @@ p{
     transition: 0.3s;
     margin-right: 10px;
 }
-.contactTab:hover{
-    .contactImg{
-        background-color: #577ea88d;
-    }
+.contactTab:hover .contactImg{
+     background-color: #577ea88d;
+
 }
 .serviceSlct{
     display: flex;
@@ -521,3 +516,158 @@ footer p {
 .reveal:nth-child(1) { transition-delay: 0.1s; }
 .reveal:nth-child(2) { transition-delay: 0.2s; }
 .reveal:nth-child(3) { transition-delay: 0.3s; }
+.infoTab.three{
+    grid-area: iOne;
+}
+.serviceBttn.one{
+    grid-area: iTwo;
+}
+.serviceBttn.two{
+    grid-area: iThree;
+}.serviceBttn.three{
+    grid-area: iFour;
+}.serviceBttn.four{
+    grid-area: iFive;
+}.serviceBttn.five{
+    grid-area: iSix;
+}.serviceBttn.six{
+    grid-area: iSeven;
+}
+.getQuoteContainer.free{
+    display: none;
+}
+@media (min-width: 768px) {
+.mobileNavBars {
+    display: none;
+}
+.navMenu {
+    max-height: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.hero {
+    padding: 60px;
+    width: 100%;
+}
+
+.infoTab.One h1 {
+    font-size: 2rem;
+}
+.smallback,.slogan{
+    margin: 0 50px 0 50px;
+    width: 50%;
+}
+.containerTwo {
+    display: grid;
+    grid-template-areas:   
+    "iOne iOne"
+    "iTwo iThree"
+    "iFour iFive"
+    "iSix iSeven";
+    gap: 5px;
+    padding: 0 0 0 5px;
+}
+.containerThree{
+    text-align: center;
+    padding: 40px;
+}
+.serviceLabel{
+    max-width: 300px;
+}
+.infoTab.Two {
+    justify-content: space-evenly;
+}
+.smallGrid {
+    grid-template-columns: 1fr 1fr;
+}
+.getQuoteContainer.top{
+    display: none;
+}
+.coverDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+}
+.serviceSlct{
+    width: 50%;
+}
+.first{
+    justify-content: center;
+}
+.getQuoteContainer.free{
+    display: flex;
+}
+}
+@media (max-width: 420px){
+    header{
+        max-height: 80px;
+    }
+    .first{
+        padding: 0 0 0 10px;
+    }
+}
+@media (min-width: 1024px) {
+.coverDivCol{
+    display: flex;
+    flex-direction: column;
+}
+.coverDivRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.containerTwo {
+    display: grid;
+    grid-template-areas:   
+    "iOne iOne iOne"
+    "iTwo iThree iFour"
+    "iFive iSix iSeven";
+    gap: 5px;
+    padding: 0 0 0 5px;
+}
+.serviceLabel{
+    max-width: 400px;
+}
+.smallGrid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.footerGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+footer p{
+    width: 300px;
+}
+.copyright{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.containerSix{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.coverDivColLast{
+    margin: 20px;
+}
+.coverDivColLast p{
+    width: 300px;
+}
+.serviceSlct{
+    width: 500px;
+}
+.coverDiv .getQuoteContainer{
+    display: none;
+}
+.coverDiv{
+    align-items: center;
+}
+.contactTab{
+    gap: 10px;
+}
+}
