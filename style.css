@@ -600,6 +600,13 @@ footer p {
 .getQuoteContainer.free{
     display: flex;
 }
+.hero{
+    padding: 20px;
+ background:
+        linear-gradient(rgba(0, 0, 0, 0.722), rgba(0, 0, 0, 0.716)),
+        url(image/backone.webp) center/cover no-repeat;
+    max-width: 100%;
+}
 }
 @media (max-width: 420px){
     header{
