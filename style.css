@@ -687,4 +687,14 @@ footer p{
     display: flex;
     justify-content: center;
 }
+.inter{
+    max-width: 2000px;
+}
+.hero{
+    display: flex;
+    justify-content: center;
+}
+.bump{
+    height: 80px;
+}
 }
