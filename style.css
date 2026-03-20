@@ -633,6 +633,7 @@ footer p {
 }
 .smallGrid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
 }
 .footerGrid {
     display: grid;
@@ -669,5 +670,21 @@ footer p{
 }
 .contactTab{
     gap: 10px;
+}
+.containerThree p{
+    max-width: 1200px;
+    text-align: center;
+}
+.containerThree{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.containerFour{
+    max-width: 1200px;
+}
+.wide{
+    display: flex;
+    justify-content: center;
 }
 }
