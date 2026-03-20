@@ -487,8 +487,10 @@ footer p {
 .end .white{
     font-size: large;
 }
-.end p img{
-    display: inline;
+.endC p{
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 .copyright{
     width: 100%;
