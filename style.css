@@ -187,7 +187,7 @@ a{
     box-shadow: 0 0 8px rgba(70,159,255,0.6);
     transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
-.getQuote:hover,.whatsappBttn:hover,.getQuoteO {
+.getQuote:hover,.whatsappBttn:hover,.getQuoteO:hover {
     box-shadow: 0 0 20px rgba(70,159,255,0.8), 0 0 40px rgba(70,159,255,0.5);
     transform: scale(1.05);
     cursor: pointer;
@@ -198,7 +198,7 @@ a{
     100% { box-shadow: 0 0 8px rgba(70,159,255,0.6); }
 }
 
-.getQuote {
+.getQuote, .getQuoteO {
     animation: glowPulse 2s infinite ease-in-out;
 }
 .bump{
