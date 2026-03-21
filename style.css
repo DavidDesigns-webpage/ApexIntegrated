@@ -257,7 +257,7 @@ p{
     max-width: 100%;
 }
 .smallback{
-    background-color: #0c1523a2;
+    background-color: #0c152300;
     border-radius: 20px;
     margin: 20px;
 }
@@ -793,13 +793,13 @@ header{
 }
 @media (min-width: 1920px){
     .logo{
-        width: 150px;
+        width: 80px;
     }
     .bump{
-        height: 120px;
+        height: 56px;
     }
     #navMenu a{
-        font-size: 30px !important;
+        font-size: 28px !important;
     }
     .namebox h1{
         font-size: 34px;
@@ -837,5 +837,8 @@ header{
         linear-gradient(rgba(0, 0, 0, 0.353), rgba(0, 0, 0, 0.332)),
         url(image/4kBG.svg) center/cover no-repeat;
     max-width: 100%;
+}
+.smallback{
+    background-color: #0c152300;
 }
 }
