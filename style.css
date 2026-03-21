@@ -116,7 +116,12 @@ nav a{
     text-decoration: none;
 
 }
-
+.navMenu a{
+    transition: transform 0.2s ease-in-out;
+}
+.navMenu a:hover{
+    transform: scale(1.05);
+}
 header h1,.last h1{
     font-family: "Orbitron",sans-serif;
     font-size: large;
@@ -187,6 +192,7 @@ a{
     border-radius: 14px;
     width: 200px;
     text-align: center;
+    color: #111522;
 
     /* Glow */
     box-shadow: 0 0 8px rgba(70,159,255,0.6);
@@ -733,7 +739,7 @@ footer p{
     justify-content: center;
 }
 .bump{
-    height: 56px;
+    height: 32px;
 }
 .hero{
     padding: 20px;
@@ -750,9 +756,7 @@ footer p{
 .end .white,.end .gray{
     justify-content: center;
 }
-p,a {
-  font-size: clamp(16px, 1.2vw, 22px)!important; 
-}
+
 .item img{
     width: 60px;
 }
@@ -763,12 +767,12 @@ header{
     justify-content: space-between;
 }
 .logo{
-    width: 80px;
+    width: 50px;
     border-radius: 0;
     margin: 0 30px 0 30px
 }
 .namebox h1{
-    font-size: 28px;
+    font-size: 22px;
 }
 .second{
     margin-right: 30px ;
@@ -783,7 +787,7 @@ header{
     justify-content: center;
 }
 .last .logo{
-    width: 80px;
+    width: 40px;
 }
 }
 @media (max-width: 1024px) {
@@ -799,7 +803,7 @@ header{
         height: 56px;
     }
     #navMenu a{
-        font-size: 28px !important;
+        font-size: 22px !important;
     }
     .namebox h1{
         font-size: 34px;
