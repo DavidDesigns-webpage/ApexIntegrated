@@ -58,8 +58,18 @@ header{
     border-bottom: 1px solid rgba(109,109,109,0.2);
     overflow-x: hidden;
     padding-top: 5px;
-}
 
+}
+.wideHeader{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sep{
+    display: flex;
+    align-items: center;
+}
 /* TOP BAR */
 
 .first, .last{
@@ -80,7 +90,7 @@ header{
     flex-direction: column;
     padding: 0 0 10px 0;
 }
-.navMenu nav{
+.navMenu a{
     padding:15px 0 15px 20px;
 }
 
@@ -114,11 +124,6 @@ header h1,.last h1{
 }
 header .logo, .last .logo{
     box-shadow: 0px 4px 10px rgba(101, 173, 251, 0.556);
-}
-.mobileNavBars{
-    position: absolute;
-    right: 7px;
-    top: 24px;
 }
 .navBars img{
     width: 30px;
@@ -202,7 +207,7 @@ a{
     animation: glowPulse 2s infinite ease-in-out;
 }
 .bump{
-    height: 30px;
+    height: 38px;
 }
 .containerOne,.containerTwo,.containerFour,.containerFive{
     display: flex;
@@ -247,13 +252,14 @@ p{
 .hero{
     padding: 20px;
  background:
-        linear-gradient(rgba(0, 0, 0, 0.722), rgba(0, 0, 0, 0.716)),
+        linear-gradient(rgba(0, 0, 0, 0.437), rgba(0, 0, 0, 0.415)),
         url(image/mobileBG.svg) center/cover no-repeat;
     max-width: 100%;
 }
 .smallback{
-    background-color: #0c152375;
+    background-color: #0c1523a2;
     border-radius: 20px;
+    margin: 20px;
 }
 .infoTab{
     color: gray;
@@ -264,11 +270,11 @@ p{
 }
 .whatsappBttn{
     padding: 12px 25px;
-    background-color: rgba(70, 159, 255, 0);
+    background-color: rgba(109, 123, 138, 0.875);
     border-radius: 14px;
     width: 200px;
     text-align: center;
-    color: #409bfb;
+    color: #C0C0C0;
 
     /* Glow */
     box-shadow: 0 0 8px rgba(70,159,255,0.6);
@@ -319,6 +325,7 @@ p{
     padding: 20px;
     color: gray;
     max-width: 400px;
+    max-height: 200px;
 }
 .serviceLabel img {
     border: #409afb67 solid 1px;
@@ -477,15 +484,15 @@ footer p {
     width: 30px;
 }
 .end .gray{
-    padding: 0 0 0 10px;
+    margin: 0;
+    text-align: left;
 }
 .end .white{
     font-size: large;
 }
-.endC p{
+.end p{
     display: flex;
     align-items: center;
-    gap: 5px;
 }
 .copyright{
     width: 100%;
@@ -535,6 +542,12 @@ footer p {
 }
 .getQuoteContainer.free{
     display: none;
+}
+.logo{
+    width: 50px;
+}
+.item img{
+    width: 50px;
 }
 @media (min-width: 768px) {
 .mobileNavBars {
@@ -600,21 +613,30 @@ footer p {
 .getQuoteContainer.free{
     display: flex;
 }
+.bump{
+    height: 80px;
+}
+.item img{
+    width: 50px;
+}
 .hero{
     padding: 20px;
  background:
-        linear-gradient(rgba(0, 0, 0, 0.722), rgba(0, 0, 0, 0.716)),
+        linear-gradient(rgba(0, 0, 0, 0.336), rgba(0, 0, 0, 0.363)),
         url(image/backone.webp) center/cover no-repeat;
     max-width: 100%;
 }
+.logo{
+    width: 50px;
 }
-@media (max-width: 420px){
-    header{
-        max-height: 80px;
-    }
-    .first{
-        padding: 0 0 0 10px;
-    }
+.wideHeader{
+    justify-content: center;
+}
+.wide{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 }
 @media (min-width: 1024px) {
 .coverDivCol{
@@ -645,6 +667,8 @@ footer p {
 .footerGrid {
     display: flex;
     flex-direction: row;
+    padding: 0;
+    margin: 0;
 }
 footer{
     width: 100%;
@@ -709,18 +733,109 @@ footer p{
     justify-content: center;
 }
 .bump{
-    height: 80px;
+    height: 56px;
 }
 .hero{
     padding: 20px;
  background:
-        linear-gradient(rgba(0, 0, 0, 0.722), rgba(0, 0, 0, 0.716)),
+        linear-gradient(rgba(0, 0, 0, 0.353), rgba(0, 0, 0, 0.332)),
         url(image/backone.webp) center/cover no-repeat;
     max-width: 100%;
+}
+.end{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.end .white,.end .gray{
+    justify-content: center;
+}
+p,a {
+  font-size: clamp(16px, 1.2vw, 22px)!important; 
+}
+.item img{
+    width: 60px;
+}
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    width: 80px;
+    border-radius: 0;
+    margin: 0 30px 0 30px
+}
+.namebox h1{
+    font-size: 28px;
+}
+.second{
+    margin-right: 30px ;
+}
+.infoTab.One h1{
+    font-size: 56px;
+}
+.bttnCover{
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.last .logo{
+    width: 80px;
 }
 }
 @media (max-width: 1024px) {
     .qLinks{
         display: none;
     }
+}
+@media (min-width: 1920px){
+    .logo{
+        width: 150px;
+    }
+    .bump{
+        height: 120px;
+    }
+    #navMenu a{
+        font-size: 30px !important;
+    }
+    .namebox h1{
+        font-size: 34px;
+    }
+    .whatsappBttn{
+        font-size: 22px;
+    }
+    .serviceLabel img{
+        width: 200px;
+    }
+    .serviceLabel{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        max-height: none;
+    }
+    .serviceSlct{
+        transform: scale(1.2);
+    }
+    .getQuoteContainer{
+        align-items: center;
+        font-size: 24px;
+    }
+    .item img{
+        width: 80px;
+    }
+    .infoTab.Two{
+        margin-top: 200px;
+    }
+    .hero{
+    padding: 20px;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.353), rgba(0, 0, 0, 0.332)),
+        url(image/4kBG.svg) center/cover no-repeat;
+    max-width: 100%;
+}
 }
