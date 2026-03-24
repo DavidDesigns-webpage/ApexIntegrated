@@ -42,6 +42,23 @@ document.addEventListener("DOMContentLoaded", () => {
       window.location.href = `mailto:info@apexintegrated.co.za?subject=${subject}&body=${body}`;
   });
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const buttonw = document.querySelector(".getQuoteW");
+  const select = document.getElementById("serviceS");
+
+  buttonw.addEventListener("click", () => {
+      const service = select.value;
+
+      const message = encodeURIComponent(
+        `Hi,\n\nI would like a quote for: ${service}\n\nName:\n`
+      );
+
+      const phone = "27632112172"; // IMPORTANT: no +, no spaces
+
+      window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
+  });
+});
+
 const year = document.getElementById("year");
     if (year){
         year.textContent = new Date().getFullYear();
@@ -59,3 +76,10 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 reveals.forEach(el => observer.observe(el));
+window.addEventListener("scroll", () => {
+    const scrollY = window.scrollY;
+    const hero = document.querySelector(".sectionBody");
+
+    hero.style.backgroundPositionY = scrollY * 0.5 + "px";
+});
+

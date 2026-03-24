@@ -37,12 +37,15 @@ html{
 }
 html, body {
     overflow-x: hidden;
+    margin: 0;
+}
+.sectionBody{
+    background: url("image/mobileBGNew.png");
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center 0;
 }
 body{
-    background-image: url(image/bgApexDark.webp);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     margin: 0;
     padding: 0;
     height: auto;
@@ -127,7 +130,7 @@ header h1,.last h1{
     font-size: large;
     padding: 5px;
 }
-header .logo, .last .logo{
+.last .logo{
     box-shadow: 0px 4px 10px rgba(101, 173, 251, 0.556);
 }
 .navBars img{
@@ -186,7 +189,16 @@ a{
     text-decoration: none;
     color: #111522;
 }
-.getQuote, .getQuoteO {
+.getQuoteO, .getQuoteW{
+    padding: 12px 25px;
+    background-color: rgba(70, 159, 255, 0);
+    border-radius: 14px;
+    width: 200px;
+    text-align: center;
+    color: #111522;
+    border: solid gray 1px;
+}
+.getQuote{
     padding: 12px 25px;
     background-color: rgb(70,159,255);
     border-radius: 14px;
@@ -198,7 +210,7 @@ a{
     box-shadow: 0 0 8px rgba(70,159,255,0.6);
     transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
-.getQuote:hover,.whatsappBttn:hover,.getQuoteO:hover {
+.getQuote:hover,.whatsappBttn:hover,.getQuoteO:hover,.getQuoteW:hover {
     box-shadow: 0 0 20px rgba(70,159,255,0.8), 0 0 40px rgba(70,159,255,0.5);
     transform: scale(1.05);
     cursor: pointer;
@@ -209,9 +221,59 @@ a{
     100% { box-shadow: 0 0 8px rgba(70,159,255,0.6); }
 }
 
-.getQuote, .getQuoteO {
+.getQuote {
     animation: glowPulse 2s infinite ease-in-out;
 }
+.getQuoteContainerlast{
+    display:  flex;
+    flex-direction: column;
+}
+.getQuoteW{
+    margin-top: 20px;
+}
+.glow-btn {
+    position: relative;
+    display: inline-block;
+    padding: 12px 28px;
+    color: #fff;
+    border: 2px solid #409bfb;
+    text-decoration: none;
+    font-weight: 600;
+    overflow: hidden;
+    transition: color 0.3s ease;
+}
+
+/* The filling layer */
+.glow-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background: #00f0ff;
+    z-index: -1;
+    transition: width 0.4s ease;
+}
+
+/* Hover fill from left → right */
+.glow-btn:hover::before {
+    width: 100%;
+}
+
+/* Text color change */
+.glow-btn:hover {
+    color: #000;
+}
+
+/* Glow effect */
+.glow-btn:hover {
+    box-shadow: 
+        0 0 10px #00f0ff,
+        0 0 20px #00f0ff,
+        0 0 40px #00f0ff;
+}
+
 .bump{
     height: 38px;
 }
@@ -259,7 +321,7 @@ p{
     padding: 20px;
  background:
         linear-gradient(rgba(0, 0, 0, 0.437), rgba(0, 0, 0, 0.415)),
-        url(image/mobileBG.svg) center/cover no-repeat;
+        url(image/Bannersonderskrif.png) center right/cover no-repeat;
     max-width: 100%;
 }
 .smallback{
@@ -274,13 +336,21 @@ p{
 .infoTab p {
     padding: 0 20px 0 20px;
 }
+.whatsappBttn img{
+    margin-right: 10px;
+}
 .whatsappBttn{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
     padding: 12px 25px;
-    background-color: rgba(109, 123, 138, 0.875);
+    background-color: rgba(109, 123, 138, 0);
     border-radius: 14px;
+    border: solid 1px gray;
     width: 200px;
     text-align: center;
-    color: #C0C0C0;
+    color: rgba(228, 233, 240);
 
     /* Glow */
     box-shadow: 0 0 8px rgba(70,159,255,0.6);
@@ -307,6 +377,30 @@ p{
 }
 .item p{
     margin: 0;
+}
+.infoTabC{
+    margin-top: 100px;
+    display: none;
+    justify-content: center;
+}
+.tabC img{
+    width: 50px;
+}
+.tabC{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding: 0 20px 0 20px;
+}
+.tabC p{
+    margin: 0;
+}
+.tabC.oneC{
+    border-right: solid 1px gray ;
+}
+.tabC.threeC{
+    border-left: solid 1px gray;
 }
 .offset{
     margin: 20px;
@@ -555,6 +649,9 @@ footer p {
 .item img{
     width: 50px;
 }
+.contactCover p img{
+    margin-right: 5px;
+}
 @media (min-width: 768px) {
 .mobileNavBars {
     display: none;
@@ -629,7 +726,7 @@ footer p {
     padding: 20px;
  background:
         linear-gradient(rgba(0, 0, 0, 0.336), rgba(0, 0, 0, 0.363)),
-        url(image/backone.webp) center/cover no-repeat;
+        url(image/Bannersonderskrif.png) center/cover no-repeat;
     max-width: 100%;
 }
 .logo{
@@ -665,6 +762,12 @@ footer p {
 }
 .serviceLabel{
     max-width: 400px;
+}
+.infoTab.Two{
+    display: none;
+}
+.infoTabC{
+    display: flex;
 }
 .smallGrid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -739,14 +842,17 @@ footer p{
     justify-content: center;
 }
 .bump{
-    height: 32px;
+    height: 20px;
 }
 .hero{
     padding: 20px;
  background:
         linear-gradient(rgba(0, 0, 0, 0.353), rgba(0, 0, 0, 0.332)),
-        url(image/backone.webp) center/cover no-repeat;
+        url(image/Bannersonderskrif.png) center/cover no-repeat;
     max-width: 100%;
+}
+.sectionBody{
+    background-image: url(image/bigBg.png);
 }
 .end{
     width: 100%;
@@ -761,15 +867,27 @@ footer p{
     width: 60px;
 }
 header{
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    max-height: 70px;
+    overflow-y: hidden;
+}
+.wideHeader{
+    margin: 0;
+    padding: 0;
+}
+.first,.sep,a{
+    padding: 0;
+    margin: 0;
 }
 .logo{
-    width: 50px;
+    width: 70px;
     border-radius: 0;
-    margin: 0 30px 0 30px
+    margin: 0;
 }
 .namebox h1{
     font-size: 22px;
@@ -790,17 +908,23 @@ header{
     width: 40px;
 }
 }
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
     .qLinks{
         display: none;
     }
+    .logo{
+    box-shadow: 0px 4px 10px rgba(101, 173, 251, 0.556);
+}
 }
 @media (min-width: 1920px){
+    header{
+        max-height: 100px;
+    }
     .logo{
-        width: 80px;
+        width: 100px;
     }
     .bump{
-        height: 56px;
+        height: 50px;
     }
     #navMenu a{
         font-size: 22px !important;
@@ -812,7 +936,7 @@ header{
         font-size: 22px;
     }
     .serviceLabel img{
-        width: 200px;
+        width: 100px;
     }
     .serviceLabel{
         display: flex;
@@ -829,20 +953,29 @@ header{
         align-items: center;
         font-size: 24px;
     }
+    .tabC img{
+    width: 100px;
+    }
     .item img{
         width: 80px;
     }
     .infoTab.Two{
         margin-top: 200px;
     }
+    .getQuoteContainer{
+        margin-top: 100px;
+    }
     .hero{
     padding: 20px;
     background:
         linear-gradient(rgba(0, 0, 0, 0.353), rgba(0, 0, 0, 0.332)),
-        url(image/4kBG.svg) center/cover no-repeat;
+        url(image/Test1.png) center/cover no-repeat;
     max-width: 100%;
 }
 .smallback{
     background-color: #0c152300;
+}
+.whatsappBttn{
+    width: 250px;
 }
 }
