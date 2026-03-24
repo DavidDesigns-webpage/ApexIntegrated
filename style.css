@@ -44,6 +44,7 @@ html, body {
     background-size: contain;
     background-repeat: repeat;
     background-position: center 0;
+    will-change: transform;
 }
 body{
     margin: 0;

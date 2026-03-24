@@ -80,6 +80,6 @@ window.addEventListener("scroll", () => {
     const scrollY = window.scrollY;
     const hero = document.querySelector(".sectionBody");
 
-    hero.style.backgroundPositionY = scrollY * 0.5 + "px";
+    hero.style.backgroundPositionY = scrollY * 0.3 + "px";
 });
 
