@@ -40,7 +40,7 @@ html, body {
     margin: 0;
 }
 .sectionBody{
-    background: url("image/mobileBGNew.png");
+    background: url("image/mobileBGNew.webp");
     background-size: contain;
     background-repeat: repeat;
     background-position: center 0;
@@ -322,7 +322,7 @@ p{
     padding: 20px;
  background:
         linear-gradient(rgba(0, 0, 0, 0.437), rgba(0, 0, 0, 0.415)),
-        url(image/Bannersonderskrif.png) center right/cover no-repeat;
+        url(image/Bannersonderskrif.webp) center right/cover no-repeat;
     max-width: 100%;
 }
 .smallback{
@@ -727,7 +727,7 @@ footer p {
     padding: 20px;
  background:
         linear-gradient(rgba(0, 0, 0, 0.336), rgba(0, 0, 0, 0.363)),
-        url(image/Bannersonderskrif.png) center/cover no-repeat;
+        url(image/Bannersonderskrif.webp) center/cover no-repeat;
     max-width: 100%;
 }
 .logo{
@@ -849,11 +849,11 @@ footer p{
     padding: 20px;
  background:
         linear-gradient(rgba(0, 0, 0, 0.353), rgba(0, 0, 0, 0.332)),
-        url(image/Bannersonderskrif.png) center/cover no-repeat;
+        url(image/Bannersonderskrif.webp) center/cover no-repeat;
     max-width: 100%;
 }
 .sectionBody{
-    background-image: url(image/bigBg.png);
+    background-image: url(image/bigBg.webp);
 }
 .end{
     width: 100%;
@@ -970,7 +970,7 @@ header{
     padding: 20px;
     background:
         linear-gradient(rgba(0, 0, 0, 0.353), rgba(0, 0, 0, 0.332)),
-        url(image/Test1.png) center/cover no-repeat;
+        url(image/Test1.webp) center/cover no-repeat;
     max-width: 100%;
 }
 .smallback{
