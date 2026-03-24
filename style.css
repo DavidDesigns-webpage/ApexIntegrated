@@ -979,3 +979,11 @@ header{
     width: 250px;
 }
 }
+@media (max-width: 383px){
+    .item img{
+        width: 40px;
+    }
+    .item p{
+        font-size: 10px;
+    }
+}
