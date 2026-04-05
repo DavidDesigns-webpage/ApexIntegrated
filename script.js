@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
   buttonw.addEventListener("click", () => {
 
       const message = encodeURIComponent(
-        `Hi,\n\nI would like to ask about your service.\n\nName:`
+        `Hi,\n\nI would like to ask about your service.`
       );
 
       const phone = "27632112172"; // IMPORTANT: no +, no spaces
