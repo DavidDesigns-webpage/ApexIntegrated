@@ -376,6 +376,9 @@ p{
     padding: 0;
     margin: 0;
 }
+.tabCimg{
+    margin-right: 10px;
+}
 .item p{
     margin: 0;
 }
@@ -853,7 +856,7 @@ footer p{
     max-width: 100%;
 }
 .sectionBody{
-    background-image: url(image/bigBg.webp);
+    background-image: url(image/BGspace.webp);
 }
 .end{
     width: 100%;

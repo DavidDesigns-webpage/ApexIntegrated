@@ -47,10 +47,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const select = document.getElementById("serviceS");
 
   buttonw.addEventListener("click", () => {
-      const service = select.value;
 
       const message = encodeURIComponent(
-        `Hi,\n\nI would like a quote for: ${service}\n\nName:`
+        `Hi,\n\nI would like to ask about your service.\n\nName:`
       );
 
       const phone = "27632112172"; // IMPORTANT: no +, no spaces
