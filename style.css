@@ -400,6 +400,9 @@ p{
 .tabC p{
     margin: 0;
 }
+.tabCtext .gray{
+    color: rgb(218, 136, 34);
+}
 .tabC.oneC{
     border-right: solid 1px gray ;
 }
@@ -412,6 +415,9 @@ p{
 .namebox{
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
+}
+.coverDivRow{
     margin: 0;
 }
 .namebox h1{
@@ -430,6 +436,21 @@ p{
     color: gray;
     max-width: 400px;
     max-height: 200px;
+}
+.serviceLabelS{
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+    justify-content: space-between;
+    border: solid 1px #409afb22;
+    background-color:#111522;
+    border-radius: 20px;
+    text-align: left;
+    padding: 20px;
+    color: gray;
+    width: 200px;
+    height: auto; 
+    align-items: center;
 }
 .serviceLabel img {
     border: #409afb67 solid 1px;
@@ -466,6 +487,7 @@ p{
     margin: 0;
 }
 .whyInfo{
+    width: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
