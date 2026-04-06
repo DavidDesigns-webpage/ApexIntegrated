@@ -44,7 +44,6 @@ html, body {
     background-size: contain;
     background-repeat: repeat;
     background-position: center 0;
-    will-change: transform;
 }
 body{
     margin: 0;
@@ -56,7 +55,7 @@ body{
 }
 header{
     z-index: 20;
-    position: fixed;
+    position: fixed !important;
     width: 100%;
     background: rgba(9,12,21,0.9);
     border-bottom: 1px solid rgba(109,109,109,0.2);
@@ -448,9 +447,12 @@ p{
     text-align: left;
     padding: 20px;
     color: gray;
-    width: 200px;
+    width: auto;
     height: auto; 
     align-items: center;
+}
+.serviceLabelS p{
+    color: #d67c0d !important;
 }
 .serviceLabel img {
     border: #409afb67 solid 1px;
@@ -504,6 +506,12 @@ p{
 .whyInfo .gray{
     font-size: small;
     padding: 0 20px 0 20px;
+    width: 100%;
+    height: 100px;
+
+}
+.quoteClient .gray{
+    color: #d67c0d;
 }
 .testimonialsTab{
     display: flex;
@@ -788,6 +796,9 @@ footer p {
 }
 .serviceLabel{
     max-width: 400px;
+}
+.serviceLabelS{
+    width: 150px;
 }
 .infoTab.Two{
     display: none;
