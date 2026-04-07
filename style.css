@@ -374,6 +374,7 @@ p{
     align-items: center;
     padding: 0;
     margin: 0;
+    width: 130px;
 }
 .tabCimg{
     margin-right: 10px;
@@ -390,11 +391,13 @@ p{
     width: 50px;
 }
 .tabC{
+    justify-content: center;
     display: flex;
     flex-direction: row;
     align-items: center;
     text-align: left;
     padding: 0 20px 0 20px;
+    width: 370px;
 }
 .tabC p{
     margin: 0;
@@ -438,18 +441,26 @@ p{
 }
 .serviceLabelS{
     display: flex;
-    margin: 10px;
+    margin: 0;
     flex-direction: column;
     justify-content: space-between;
     border: solid 1px #409afb22;
     background-color:#111522;
     border-radius: 20px;
-    text-align: left;
+    text-align: center;
     padding: 20px;
     color: gray;
     width: auto;
     height: auto; 
     align-items: center;
+    width: 100px;
+    height: 80px;
+}
+.smallGrid.panels{
+    gap: 10px;
+}
+.smallGrid .spacer{
+    width: 160px;
 }
 .serviceLabelS p{
     color: #d67c0d !important;
@@ -683,6 +694,9 @@ footer p {
 .item img{
     width: 50px;
 }
+.item .gray{
+    height: 36px;
+}
 .contactCover p img{
     margin-right: 5px;
 }
@@ -889,7 +903,7 @@ footer p{
     max-width: 100%;
 }
 .sectionBody{
-    background-image: url(image/BGspace.webp);
+    background-image: url(image/tonyBG.webp);
 }
 .end{
     width: 100%;
