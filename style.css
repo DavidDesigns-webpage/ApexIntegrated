@@ -500,7 +500,7 @@ p{
     margin: 0;
 }
 .whyInfo{
-    width: 200px;
+    width: 180px;
     display: flex;
     flex-direction: column;
     justify-content: center;
