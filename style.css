@@ -701,6 +701,75 @@ footer p {
 .contactCover p img{
     margin-right: 5px;
 }
+/* PANEL */
+#servicePanel {
+    position: fixed;
+    inset: 0;
+    background: #111522f1;
+    z-index: 9999;
+
+    display: flex;
+    align-content: center;
+    justify-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s ease;
+    overscroll-behavior: contain;
+
+    overflow-y: auto; /* THIS enables panel scrolling */
+}
+
+
+#servicePanel.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.panelContent {
+    font-family: "Inter",sans-serif;
+    margin: 80px auto;
+    width: 90%;
+    max-width: 1100px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    height: fit-content;
+    transform: scale(0.9);
+    transition: transform 0.4s ease;
+}
+
+
+#servicePanel.active .panelContent {
+    transform: scale(1);
+}
+
+.panelContent img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 4px 4px 10px rgba(101, 173, 251, 0.556);
+    max-width: 500px;
+    max-height: 500px;
+}
+
+.panelText h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+#closePanel {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.sectionBody.noScroll {
+    overflow: hidden;
+}
+
 @media (min-width: 768px) {
 .mobileNavBars {
     display: none;
@@ -708,6 +777,11 @@ footer p {
 .navMenu {
     max-height: none;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.panelContent{
+    display: flex;
     justify-content: center;
     align-items: center;
 }
