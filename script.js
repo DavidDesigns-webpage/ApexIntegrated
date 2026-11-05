@@ -167,8 +167,9 @@ links.forEach(link => {
 
         title.innerHTML = serviceData[service].title;
         desc.innerHTML = serviceData[service].desc;
+        img.loading = "lazy";
         img.src = serviceData[service].img;
-
+        
         panel.classList.add("active");
         document.querySelector(".sectionBody").classList.add("noScroll");
         /* update URL */
