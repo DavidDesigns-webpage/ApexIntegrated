@@ -548,9 +548,6 @@ p{
     padding: 20px;
     color: gray;
 }
-.coverDivRowTest{
-    margin: 50px;
-}
 .quoteClient p{
     margin: 0;
     font-size: small;
@@ -1132,6 +1129,21 @@ header{
 }
 .whatsappBttn{
     width: 250px;
+}
+.wideTwo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+}
+.testimonialsTab{
+    width: 2000px;
+}
+.containerFive{
+    max-width: 2000px;
 }
 }
 @media (max-width: 383px){
