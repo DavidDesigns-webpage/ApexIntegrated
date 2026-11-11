@@ -277,7 +277,7 @@ a{
 .bump{
     height: 38px;
 }
-.containerOne,.containerTwo,.containerFour,.containerFive{
+.containerOne,.containerTwo,.containerFour{
     display: flex;
     width: 100%;
     padding-top: 50px;
@@ -287,6 +287,17 @@ a{
     font-family: "Inter", sans-serif;
     text-align: center;
     overflow-x: hidden;
+}
+.containerFive{
+    display: flex;
+    padding-top: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+    margin: 50px;
+    border-radius: 20px;
 }
 .containerThree,.containerSix, footer{
     display: block;
@@ -536,7 +547,9 @@ p{
     text-align: left;
     padding: 20px;
     color: gray;
-    max-width: 400px;
+}
+.coverDivRowTest{
+    margin: 50px;
 }
 .quoteClient p{
     margin: 0;
@@ -1044,6 +1057,9 @@ header{
     .qLinks{
         display: none;
     }
+    .containerFive{
+    margin: 20px;
+}
     .logo{
     box-shadow: 0px 4px 10px rgba(101, 173, 251, 0.556);
 }
