@@ -100,7 +100,7 @@ header{
 /* WHEN OPEN */
 
 header.open .navMenu{
-    max-height:400px;
+    max-height:450px;
 }
 header.open{
     max-height: none;
