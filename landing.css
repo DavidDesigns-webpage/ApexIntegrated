@@ -1,0 +1,36 @@
+.lp{font-family:"Inter",sans-serif;max-width:1100px;margin:0 auto;padding:0 20px}
+.lp section{padding:36px 0}
+.lp h1,.lp h2,.lp h3{color:rgb(228,233,240)}
+.lp h1{font-size:clamp(1.9rem,5vw,3rem);margin:12px 0}
+.lp h2{font-size:clamp(1.4rem,3.5vw,2rem);margin:0 0 20px}
+.lp h3{font-size:1.05rem;margin:0 0 8px}
+.lp p{line-height:1.65}
+.lp-hero{padding-top:110px!important;text-align:left}
+.lp-hero .slogan{width:fit-content;margin:0 0 12px;padding:0 12px}
+.lp-cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:24px}
+.lp-cta a{margin:0}
+.lp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px}
+.lp-card{border:1px solid #409afb22;background:#111522;border-radius:20px;padding:20px;transition:box-shadow .3s}
+.lp-card:hover{box-shadow:4px 4px 10px rgb(70,159,255)}
+.lp-card img{width:50px;padding:5px;border:#409afb67 solid 1px;background:#112038;border-radius:16px;margin-bottom:12px}
+.lp-card p{margin:0;font-size:.92rem}
+.lp-chips{display:flex;flex-wrap:wrap;gap:10px;padding:0;list-style:none}
+.lp-chips li{border:1px solid #409afb55;background:#409afb18;color:rgb(228,233,240);border-radius:50px;padding:8px 16px;font-size:.9rem}
+.lp details{border:1px solid #409afb22;background:#111522;border-radius:16px;padding:16px 20px;margin-bottom:10px}
+.lp summary{cursor:pointer;color:rgb(228,233,240);font-weight:600}
+.lp details p{margin:12px 0 0}
+.lp-contact{border:1px solid #409afb44;background:#112038;border-radius:20px;padding:28px;text-align:center}
+.lp-contact .lp-cta{justify-content:center}
+.lp-contact p{margin:6px 0}
+.lp-note{font-size:.9rem}
+.lp-note a{color:#409bfb}
+footer a p{margin:0}
+@media(min-width:768px){.lp-hero{padding-top:130px!important}}
+
+/* Orange fill-on-hover buttons (same effect as the index form buttons) */
+.lp-btn{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:10px;box-sizing:border-box;min-width:220px;max-width:100%;padding:12px 25px;border-radius:14px;border:2px solid #409bfb;background:rgba(70,159,255,0);color:rgb(228,233,240);font-weight:600;text-align:center;overflow:hidden;isolation:isolate;cursor:pointer;transition:color .3s ease,box-shadow .3s ease}
+.lp-btn.primary{background:rgb(70,159,255);color:#111522;box-shadow:0 0 8px rgba(70,159,255,.6)}
+.lp-btn::before{content:"";position:absolute;top:0;left:0;width:0;height:100%;background:#d67c0d;z-index:-1;transition:width .4s ease}
+.lp-btn:hover::before,.lp-btn:focus-visible::before{width:100%}
+.lp-btn:hover,.lp-btn:focus-visible{color:#000;box-shadow:0 0 10px #f4850e,0 0 20px #f4850e,0 0 40px #f4850e}
+@media (prefers-reduced-motion:reduce){.lp-btn,.lp-btn::before{transition:none}}

@@ -28,36 +28,6 @@ navLinks.forEach(link => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  const button = document.querySelector(".getQuoteO");
-  const select = document.getElementById("serviceS");
-
-  button.addEventListener("click", () => {
-      const service = select.value;
-      const subject = encodeURIComponent(`Quote Request: ${service}`);
-      const body = encodeURIComponent(
-        `Hi,\n\nI would like a quote for: ${service}\n\nName:\nContact:\n`
-      );
-
-      window.location.href = `mailto:info@apexintegrated.co.za?subject=${subject}&body=${body}`;
-  });
-});
-document.addEventListener("DOMContentLoaded", () => {
-  const buttonw = document.querySelector(".getQuoteW");
-  const select = document.getElementById("serviceS");
-
-  buttonw.addEventListener("click", () => {
-
-      const message = encodeURIComponent(
-        `Hi,\n\nI would like to ask about your service.`
-      );
-
-      const phone = "27632112172"; // IMPORTANT: no +, no spaces
-
-      window.open(`https://wa.me/${phone}?text=${message}`, "_blank");
-  });
-});
-
 const year = document.getElementById("year");
     if (year){
         year.textContent = new Date().getFullYear();
@@ -202,3 +172,55 @@ window.addEventListener("load", () => {
         panel.classList.add("active");
     }
 });
+const quoteForm = document.getElementById("quoteForm");
+if (quoteForm) {
+    const TO_EMAIL = "info@apexintegrated.co.za";
+    const WA_NUMBER = "27632112172";
+    const statusEl = document.getElementById("quoteStatus");
+    const v = id => document.getElementById(id).value.trim();
+
+    function say(html, cls) {
+        statusEl.innerHTML = html;
+        statusEl.className = cls || "";
+    }
+
+    function check() {
+        let ok = true;
+        ["qName", "qPhone", "qService"].forEach(id => {
+            const el = document.getElementById(id);
+            const bad = !el.value.trim();
+            el.classList.toggle("invalid", bad);
+            if (bad) ok = false;
+        });
+        return ok;
+    }
+
+    function getMessage() {
+        const service = v("qService");
+        const body =
+            `Hi,\r\n\r\nI would like a quote for: ${service}\r\n\r\n` +
+            `Name: ${v("qName")}\r\nPhone: ${v("qPhone")}\r\n` +
+            (v("qArea") ? `Area: ${v("qArea")}\r\n` : "") +
+            (v("qMessage") ? `\r\n${v("qMessage")}\r\n` : "");
+        return { subject: `Quote Request: ${service}`, body };
+    }
+
+    // WhatsApp
+    document.getElementById("qWhatsApp").addEventListener("click", () => {
+        if (!check()) return say("Please fill in your name, phone number and service.", "err");
+        const { body } = getMessage();
+        window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(body)}`, "_blank", "noopener");
+        say("", "");
+    });
+
+    // Email (opens the visitor's mail app, pre-filled)
+    quoteForm.addEventListener("submit", e => {
+        e.preventDefault();
+        if (!check()) return say("Please fill in your name, phone number and service.", "err");
+        const { subject, body } = getMessage();
+        const s = encodeURIComponent(subject), b = encodeURIComponent(body);
+        window.location.href = `mailto:${TO_EMAIL}?subject=${s}&body=${b}`;
+        const gmail = `https://mail.google.com/mail/?view=cm&fs=1&to=${TO_EMAIL}&su=${s}&body=${b}`;
+        say(`Nothing opened? <a class="blue" href="${gmail}" target="_blank" rel="noopener">Open in Gmail</a> or use WhatsApp.`, "ok");
+    });
+}
