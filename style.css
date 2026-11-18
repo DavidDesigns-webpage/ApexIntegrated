@@ -544,7 +544,7 @@ p{
     border: solid 1px #409afb22;
     background-color:#111522;
     border-radius: 20px;
-    text-align: left;
+    text-align: center;
     padding: 20px;
     color: gray;
 }
@@ -779,7 +779,11 @@ footer p {
 .sectionBody.noScroll {
     overflow: hidden;
 }
-
+@media (max-width: 768px) {
+    .coverDivRow{
+        max-width: 400px;
+    }
+}
 @media (min-width: 768px) {
 .mobileNavBars {
     display: none;
@@ -1192,5 +1196,11 @@ header{
     }
     .footerGrid .end{
         min-width: 0;
+    }
+    .coverDivRow{
+        max-width: 1000px;
+    }
+    .testimonialsTab{
+        max-width: 1000px;
     }
 }
