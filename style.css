@@ -286,7 +286,6 @@ a{
     align-items: center;
     font-family: "Inter", sans-serif;
     text-align: center;
-    overflow-x: hidden;
 }
 .containerFive{
     display: flex;
